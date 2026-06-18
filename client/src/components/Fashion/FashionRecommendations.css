@@ -1,0 +1,172 @@
+.fashion-card {
+  height: 100%;
+}
+
+.recommendation-intro {
+  font-size: 1rem;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+}
+
+.fashion-tabs .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--gray-color);
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.fashion-tabs .nav-link.active {
+  color: var(--primary-color);
+  background-color: transparent;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.fashion-tabs .nav-link:hover:not(.active) {
+  color: var(--dark-color);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.outfit-grid {
+  margin: 0 -0.5rem;
+}
+
+.outfit-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  height: 100%;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.outfit-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.outfit-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.outfit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.outfit-card:hover .outfit-image img {
+  transform: scale(1.05);
+}
+
+.outfit-content {
+  padding: 1rem;
+}
+
+.outfit-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.outfit-description {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Outfit detail view */
+.outfit-detail {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.outfit-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.outfit-detail-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.outfit-detail-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.outfit-detail-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.outfit-detail-info .outfit-description {
+  font-size: 1rem;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.outfit-items h5, .outfit-tips h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.outfit-items ul {
+  padding-left: 1.25rem;
+}
+
+.outfit-items li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.outfit-tips p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-color);
+}
+
+@media (min-width: 992px) {
+  .outfit-detail-content {
+    flex-direction: row;
+  }
+  
+  .outfit-detail-image {
+    flex: 0 0 40%;
+  }
+  
+  .outfit-detail-info {
+    flex: 0 0 60%;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .outfit-grid {
+    margin: 0;
+  }
+  
+  .outfit-detail-image img {
+    height: 250px;
+  }
+}
